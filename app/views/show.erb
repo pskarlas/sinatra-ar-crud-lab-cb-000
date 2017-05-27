@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sinatra CRUD/ActiveRecord</title>
+  </head>
+  <body>
+    <h3><%= @post.name %></h3> 
+    <p> <%= @post.content %> </p>
+    <a href="/posts">Back to Posts</a>
+    <form action="/posts/<%=@post.id%>/delete" method="POST">
+      <input id="hidden" type="hidden" name="_method" value="delete">
+      <input type="submit" value="delete">
+    </form>
+  </body>
+</html>

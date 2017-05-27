@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sinatra CRUD/ActiveRecord</title>
+  </head>
+  <body>
+    <h2>Posts Index</h2>
+    <ul>
+      <% @posts.each do |post| %> 
+        <li><a href="/posts/<%= post.id %>"><%= post.name %> <%= post.content %></a><span><a href="/posts/<%= post.id %>/edit"> Edit</a></span></li>
+        
+
+      <% end %>
+    </ul>
+  </body>
+</html>
